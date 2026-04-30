@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Photo Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="profile">
+
+    <h1>📸 My Photo Profile</h1>
+
+    <!-- AUTH -->
+    <div class="card">
+      <h2>Account</h2>
+
+      <input id="regUsername" placeholder="Username" />
+      <input id="regEmail" placeholder="Email" />
+      <input id="regPassword" type="password" placeholder="Password" />
+      <button onclick="register()">Create Account</button>
+
+      <hr />
+
+      <input id="loginEmail" placeholder="Email" />
+      <input id="loginPassword" type="password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+
+      <p id="status"></p>
+    </div>
+
+    <!-- UPLOAD -->
+    <div class="card">
+      <h2>Upload Photo</h2>
+      <input type="file" id="fileInput" />
+      <button onclick="uploadPhoto()">Upload</button>
+    </div>
+
+    <!-- PHOTOS -->
+    <div class="card">
+      <div class="row">
+        <h2>My Gallery</h2>
+        <button onclick="loadPhotos()">Refresh</button>
+      </div>
+
+      <div id="photos" class="gallery"></div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
